@@ -18,10 +18,10 @@ procs = []
 
 
 for i in range(4):
-    proc = Process(target=gzipper, args=(fnames[count:count + 4]))
+    proc = Process(target=gzipper, args=(fnames[count:count + 25]))
     procs.append(proc)
     proc.start()
-    count += 4
+    count += 25
 
 
 for proc in procs:
