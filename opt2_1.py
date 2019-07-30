@@ -43,6 +43,7 @@ req_size: {round(req_av)}, {req_arr[round(curr_succ - 0.05 * succ - 1)]}, {req_a
 resp_size: {round(resp_av)}, {resp_arr[round(curr_succ - 0.05 * succ - 1)]}, {resp_arr[round(curr_succ - 0.01 * succ - 1)]} byte
 ----------------------\n
 """
+                sys.stdout.writelines(str1)
             if amount == 10_000:
                 fper = round(len(time_arr) * 0.95)
                 del time_arr[0:fper]
@@ -55,7 +56,6 @@ resp_size: {round(resp_av)}, {resp_arr[round(curr_succ - 0.05 * succ - 1)]}, {re
                 del req_arr[0:fper]
                 del resp_arr[0:fper]
                 curr_succ -= fper
-                sys.stdout.writelines(str1)
     amount = 0
     succ = 0
     time_arr = []
