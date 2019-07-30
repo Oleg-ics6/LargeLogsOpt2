@@ -55,7 +55,7 @@ resp_size: {round(resp_av)}, {resp_arr[round(curr_succ - 0.05 * succ - 1)]}, {re
                 del req_arr[0:fper]
                 del resp_arr[0:fper]
                 curr_succ -= fper
-            sys.stdout.writelines(str1)
+                sys.stdout.writelines(str1)
     amount = 0
     succ = 0
     time_arr = []
